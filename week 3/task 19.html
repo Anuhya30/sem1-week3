@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Scale on Hover</title>
+    <style>
+        .image-container {
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .image {
+            width: 300px;       
+            transition: transform 0.3s ease; 
+        }
+
+        .image:hover {
+            transform: scale(1.1); 
+        }
+    </style>
+</head>
+<body>
+
+<div class="image-container">
+    <img class="image" src="../week 2/nature.jpeg" alt="Placeholder Image">
+</div>
+
+</body>
+</html>

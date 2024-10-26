@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Sidebar</title>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: sticky; 
+    top: 0; 
+    height: 100vh; 
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+                <li><a href="#">Link 4</a></li>
+            </ul>
+        </div>
+        <div class="content">
+            <h1>Main Content</h1>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta veritatis quisquam vero cupiditate quod, eligendi praesentium adipisci facilis at alias qui pariatur voluptate numquam delectus modi. Consectetur alias iusto voluptas?</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A, labore? Quod qui quibusdam consequuntur accusantium aut deleniti neque odio aliquam blanditiis sequi voluptatum quos magni eveniet, ut, similique delectus hic!</p>
+            <p>More content here...</p>
+            <p>Even more content...</p>
+            <p>Keep scrolling...</p>
+            <p>And more...</p>
+        </div>
+    </div>
+</body>
+</html>

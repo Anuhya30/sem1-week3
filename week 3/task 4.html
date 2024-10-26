@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tooltip Example</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.tooltip-container {
+    position: relative; /* Set container to relative for absolute positioning */
+    display: inline-block; /* Keep the button and tooltip together */
+}
+
+.tooltip-button {
+    padding: 10px 20px;
+    background-color: #14ff12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.tooltip {
+    position: absolute; 
+    bottom: 100%;  
+    left: 80%; 
+    transform: translateX(50%);
+    background-color:pink;
+    color: red;
+    padding: 18px;
+    border-radius: 4px;
+    
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="tooltip-container">
+        <button class="tooltip-button">Hover me!</button>
+        <div class="tooltip">This is the tooltip text!</div>
+    </div>
+</body>
+</html>

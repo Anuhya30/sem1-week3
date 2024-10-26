@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Navigation Menu</title>
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: blueviolet;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 1.5rem;
+}
+
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+    background-color: #575757;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%; 
+    left: 0;
+    background-color: #333;
+    z-index: 999; 
+}
+
+.nav-links li:hover .dropdown {
+    display: block; 
+}
+
+.dropdown li {
+   width: 100%; 
+}
+
+@media (max-width: 768px) {
+    .menu-icon {
+        display: block; 
+    }
+
+    .nav-links {
+        display: none; 
+        flex-direction: column; 
+        width: 100%;
+        background-color: #ff367f;
+        overflow: hidden; 
+        transition: max-height 0.3s ease;
+        max-height: 0; 
+    }
+
+    .nav-links.active {
+        display: flex; 
+        max-height: 500px; 
+    }
+
+    .nav-links li {
+        text-align: center; 
+    }
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">MyWebsite</div>
+        <ul class="nav-links" id="navLinks">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">About</a>
+                <ul class="dropdown">
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Our History</a></li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">Services</a>
+                <ul class="dropdown">
+                    <li><a href="#">Consulting</a></li>
+                    <li><a href="#">Development</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+</html>
